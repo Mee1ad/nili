@@ -1,0 +1,31 @@
+.row {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.heading-meta {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #777;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #101010;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin: 0 0 20px 0;
+}
