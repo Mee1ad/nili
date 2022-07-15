@@ -7,7 +7,10 @@
       <span>{{ price }}</span>
 
       <ul>
-        <li v-for="item in items" :key="item">{{ item }}</li>
+        <li> {{item1}} </li>
+        <li> {{item2}} </li>
+        <li> {{item3}} </li>
+        <li> {{item4}} </li>
       </ul>
     </div>
   </div>
@@ -21,7 +24,10 @@ export default {
     image_path: {required: true, type: String},
     name: {required: true, type: String},
     price: {required: true, type: String},
-    items: {required: true, type: [String]}
+    item1: {required: true, type: String},
+    item2: {required: true, type: String},
+    item3: {required: true, type: String},
+    item4: {required: true, type: String}
   },
   data:()=>{
     return {
