@@ -47,10 +47,6 @@ const menuItems = [
     to: '/feedback'
   },
   {
-    name: 'Blog',
-    to: '/blog'
-  },
-  {
     name: 'Contact',
     to: '/contact'
   },

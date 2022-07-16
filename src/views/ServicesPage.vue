@@ -9,6 +9,7 @@
     <span class="heading-meta">INTERESTED TO WORK WITH US?</span>
     <router-link to="/contact" class="button"> Contact With Us</router-link>
   </div>
+  <PageHeader title="Pricing" meta="PACKAGES"/>
 <!--  <PackageCard class="col-xs-4" image_path="pricing/1.jpg" name="Standard" price="300" item1="3 Hours Session"-->
 <!--               item2="Photo Editing" item3="50 Digital Images" item4="Online Gallery"></PackageCard>-->
   <div class="row card">
