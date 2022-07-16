@@ -2,14 +2,14 @@
 <!--http://duruthemes.com/demo/html/annie/light/index.html-->
 <template>
 
-    <div class="root">
-      <SideMenu msg="Welcome to Your Vue.js App"/>
-      <div class="main-content">
-        <router-view/>
-        <FooterPage msg="test"/>
-      </div>
-
+  <div class="root">
+    <SideMenu msg="Welcome to Your Vue.js App"/>
+    <div class="main-content">
+      <router-view/>
+      <FooterPage msg="test"/>
     </div>
+
+  </div>
 
 </template>
 
@@ -36,6 +36,10 @@ body {
   line-height: 1.5em;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 .main-content {
   flex: 1;
 }
@@ -43,16 +47,6 @@ body {
 .root {
   display: flex;
 }
-
-p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-  line-height: 1.5em;
-  margin: 0 0 20px;
-  color: #777;
-  font-weight: 400;
-}
-
 
 
 .animated {
