@@ -1,8 +1,8 @@
 <!--https://webredox.net/demo/wp/annie/light/-->
 <!--http://duruthemes.com/demo/html/annie/light/index.html-->
 <template>
-
   <div class="root">
+    <ScrollProgress />
     <SideMenu msg="Welcome to Your Vue.js App"/>
     <div class="main-content">
       <router-view/>
@@ -16,19 +16,22 @@
 <script>
 import SideMenu from './components/SideMenu.vue'
 import FooterPage from "@/components/FooterPage.vue";
+import ScrollProgress from "@/components/ScrollProgress";
 
 
 export default {
   name: 'App',
   components: {
     SideMenu,
-    FooterPage
+    FooterPage,
+    ScrollProgress
   }
 }
 
 </script>
 
-<style>
+<style lang="scss">
+
 body {
   margin: 0;
   padding: 0;
