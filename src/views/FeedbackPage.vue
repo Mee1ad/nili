@@ -133,25 +133,6 @@ export default {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.submit {
-  text-shadow: none;
-  padding: 10px 30px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-weight: 400;
-  border: none;
-  color: #ccc;
-  -webkit-transition: background-color .15s ease-out;
-  transition: background-color .15s ease-out;
-  background-color: #1b1b1b;
-  margin-top: 0px;
-  font-size: 16px;
-  letter-spacing: 0px;
-  border-radius: 30px;
-  font-family: 'Josefin Sans', sans-serif;
-  line-height: 1.75;
-}
-
 .submit:hover {
   color: #fff;
   cursor: pointer;
