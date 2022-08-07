@@ -5,5 +5,5 @@
 // }
 
 module.exports = {
-    publicPath: 'nili/'
+    publicPath: '/'
 }
