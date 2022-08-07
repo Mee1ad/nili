@@ -1,7 +1,7 @@
 <template>
   <div class="parent">
     <PageHeader title="Contact Us"/>
-    <div class="row content">
+    <div class="row content animated fadeInUp">
       <div class="contact">
         <h3 class="contact-heading">I’m available for worldwide orders.</h3>
         <p>Qualamy nisl sodales sit amet sapien id, placerat sodales orciter.
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/PgaeHeader";
+import PageHeader from "@/components/PageHeader";
 
 export default {
   name: "ContactPage",

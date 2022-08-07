@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import PageHeader from "@/components/PgaeHeader";
+import PageHeader from "@/components/PageHeader";
 export default {
   name: "AboutPage",
   components: {PageHeader},

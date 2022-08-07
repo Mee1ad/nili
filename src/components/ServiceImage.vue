@@ -1,10 +1,12 @@
 <template>
   <div class="image-holder animated fadeInUp">
-    <img class="image" :src="require(`@/assets/${image_path}`)">
-    <div class="caption">
-      <i class="fa fa-camera"></i>
-      <h3>{{ caption }}</h3>
-    </div>
+    <router-link :to="`/${serviceUrl}`">
+      <img class="image" :src="require(`@/assets/${imagePath}`)">
+      <div class="caption">
+        <i class="fa fa-camera"></i>
+        <h3>{{ caption }}</h3>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -12,8 +14,9 @@
 export default {
   name: "ServiceImage",
   props: {
-    image_path: {required: true, type: String},
-    caption: {required: true, type: String}
+    imagePath: {required: true, type: String},
+    caption: {required: true, type: String},
+    serviceUrl: {required: true, type: String}
   }
 }
 </script>

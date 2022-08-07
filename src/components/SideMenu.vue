@@ -7,7 +7,7 @@
       </a>
       <font-awesome-icon icon="fa-solid fa-user-secret"/>
       <a class="typo">
-        Annie McCury
+        Nili Razaghi
         <span>PHOTOGRAPHER</span>
       </a>
       <ul class="menu-items">

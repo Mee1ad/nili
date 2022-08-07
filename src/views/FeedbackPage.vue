@@ -24,7 +24,7 @@
 
 <script>
 import FeedbackItem from "@/components/FeedbackItem";
-import PageHeader from "@/components/PgaeHeader";
+import PageHeader from "@/components/PageHeader";
 
 const feedbacks = [
   {

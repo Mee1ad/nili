@@ -19,6 +19,7 @@ import FooterPage from "@/components/FooterPage.vue";
 import ScrollProgress from "@/components/ScrollProgress";
 
 
+
 export default {
   name: 'App',
   components: {
