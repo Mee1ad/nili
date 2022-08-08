@@ -1,3 +1,8 @@
+:root{
+    --side-menu-width : 23vw;
+}
+
+
 .row {
     margin-right: auto;
     margin-left: auto;

@@ -1,10 +1,10 @@
 <template>
   <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-  <div class="side-menu-container">
-    <div class="side-menu">
-      <a class="logo" href="google.com">
+  <div class="side-menu">
+    <div class="side-menu-content">
+      <router-link class="logo" to="/">
         <img class="logo-image" src="../assets/logo.png">
-      </a>
+      </router-link>
       <font-awesome-icon icon="fa-solid fa-user-secret"/>
       <a class="typo">
         Nili Razaghi
@@ -12,16 +12,20 @@
       </a>
       <ul class="menu-items">
         <li class="menu-item" v-for="menuItem in menuItems" :key="menuItem">
-          <router-link :to="menuItem.to" :active="$route.fullPath === menuItem.to?'':undefined">{{ menuItem.name }}</router-link>
+          <router-link :to="menuItem.to" :active="$route.fullPath === menuItem.to?'':undefined">{{
+              menuItem.name
+            }}
+          </router-link>
         </li>
       </ul>
       <ul class="footer">
         <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://instagram.com/nilirazaghi" target="_blank"><i class="fa fa-instagram"></i></a></li>
         <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
       </ul>
     </div>
   </div>
+  <div class="side-menu-placeholder"/>
 </template>
 
 <script>
@@ -56,7 +60,7 @@ export default {
   props: {
     msg: String
   },
-  data:()=>{
+  data: () => {
     return {
       menuItems
     };
@@ -100,17 +104,25 @@ export default {
   line-height: 1.5em;
 }
 
-.side-menu-container {
-  height: 100vh;
-  width: 23vw;
-}
 
 .side-menu {
-  padding: 30px 30px;
-  width: 19vw;
   position: fixed;
+  max-width: var(--side-menu-width);
+  height: 100vh;
   box-shadow: 1px 1px 20px 0 #99999924;
+  z-index: 99;
+  background-color: #fff;
 }
+
+.side-menu-placeholder {
+  height: 100vh;
+  width: var(--side-menu-width);
+}
+
+.side-menu-content {
+  padding: 30px 30px;
+}
+
 
 .menu-items {
   list-style: none;
@@ -168,7 +180,7 @@ a:hover {
 
 }
 
-.menu-items > li > a[active]{
+.menu-items > li > a[active] {
   color: black;
 }
 
