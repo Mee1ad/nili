@@ -7,10 +7,10 @@
       <div class="glassBox__imgBox">
         <img :src="require(`@/assets/${imagePath}.png`)" alt="" class="obj">
       </div>
-      <!--      <div class="caption">-->
-      <!--        <i class="fa fa-camera"></i>-->
-      <!--        <h3>{{ caption }}</h3>-->
-      <!--      </div>-->
+            <div class="caption">
+              <i class="fa fa-camera"></i>
+              <h3>{{ caption }}</h3>
+            </div>
     </router-link>
   </div>
 </template>
@@ -49,6 +49,7 @@ export default {
 }
 
 .caption > h3 {
+  backdrop-filter: blur(2px) saturate(100%);
   color: white;
   font-size: 20px;
   margin-top: 10px;
