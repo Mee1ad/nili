@@ -2,8 +2,8 @@
   <PageHeader meta="WHAT WE DO" title="Services"></PageHeader>
   <div class="row">
     <div class="col-xs-4" v-for="serviceImage in serviceImages" :key="serviceImage">
-      <ServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
-                    :serviceUrl="serviceImage.serviceUrl"/>
+      <AnimatedServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
+                            :croppedImagePath="serviceImage.croppedImagePath" :serviceUrl="serviceImage.serviceUrl"/>
     </div>
   </div>
   <div class="work-with-us animated fadeInUp">
@@ -22,41 +22,42 @@
 </template>
 
 <script>
-import ServiceImage from "@/components/ServiceImage";
+// import AnimatedServiceImage from "@/components/ServiceImage";
 import PageHeader from "@/components/PageHeader";
 import PackageCard from "@/components/PackageCard";
+import AnimatedServiceImage from "@/components/AnimatedServiceImage";
 
 const serviceImages = [
   {
-    image_path: 'services/birthday/1.jpg',
+    image_path: 'services/birthday/cover',
     caption: 'Birthday Photography',
     serviceUrl: 'services/birthday'
   },
   {
-    image_path: 'services/portrait/1.jpg',
+    image_path: 'services/portrait/cover',
     caption: 'Portrait Photography',
     serviceUrl: 'services/portrait'
   },
   {
-    image_path: 'services/couple/1.jpg',
+    image_path: 'services/couple/cover',
     caption: 'Couple Photography',
     serviceUrl: 'services/couple'
   },
   {
-    image_path: 'services/kids/1.jpg',
+    image_path: 'services/kids/cover',
     caption: 'Kids Photography',
     serviceUrl: 'services/kids'
   },
-  // {
-  //   image_path: 'services/04.jpg',
-  //   caption: 'Product Photography',
-  //   serviceUrl: 'services/service-4'
-  // },
-  // {
-  //   image_path: 'services/03.jpg',
-  //   caption: 'Sport Photography',
-  //   serviceUrl: 'services/service-6'
-  // }
+  {
+    image_path: 'services/product/cover',
+    caption: 'Product Photography',
+    serviceUrl: 'services/product'
+  },
+  {
+    image_path: 'services/edit/cover',
+    caption: 'Edit Photos',
+    serviceUrl: 'services/edit'
+  }
 ]
 const packagesList = [
   {
@@ -89,7 +90,8 @@ const packagesList = [
 ]
 export default {
   name: "ServicesView",
-  components: {PackageCard, PageHeader, ServiceImage},
+  // components: {AnimatedServiceImage, PackageCard, PageHeader, ServiceImage},
+  components: {AnimatedServiceImage, PackageCard, PageHeader},
   data: () => {
     return {
       serviceImages,
