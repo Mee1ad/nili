@@ -50,26 +50,26 @@ export default {
   background-size: cover;
   height: 100vh;
   animation-name: example;
-  animation-duration: 10s;
+  animation-duration: 20s;
   animation-iteration-count: infinite;
 }
 
 
 @keyframes example {
   0% {
-    background-image: url("../assets/home/slider/01.jpg");
+    background-image: url("../assets/home/slider/01.webp");
   }
   20% {
-    background-image: url("../assets/home/slider/01.jpg");
+    background-image: url("../assets/home/slider/01.webp");
   }
   50% {
-    background-image: url("../assets/home/slider/02.jpg");
+    background-image: url("../assets/home/slider/02.webp");
   }
   70% {
-    background-image: url("../assets/home/slider/02.jpg");
+    background-image: url("../assets/home/slider/02.webp");
   }
   100% {
-    background-image: url("../assets/home/slider/01.jpg");
+    background-image: url("../assets/home/slider/01.webp");
   }
 }
 

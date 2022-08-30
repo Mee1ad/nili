@@ -28,7 +28,6 @@ export default {
 
 .image {
   width: 100%;
-  margin: 10px;
 }
 
 .caption {

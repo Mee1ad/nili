@@ -39,7 +39,7 @@ export default {
 .about-image {
   background-size: cover;
   height: 100vh;
-  background-image: url("../assets/home/slider/01.jpg");
+  background-image: url("../assets/about/01.webp");
   animation-duration: 10s;
   animation-iteration-count: infinite;
   margin-bottom: 30px;

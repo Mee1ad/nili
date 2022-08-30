@@ -1,7 +1,7 @@
 <template>
   <PageHeader meta="WHAT WE DO" title="Services"></PageHeader>
   <div class="row">
-    <div class="col-xs-4" v-for="serviceImage in serviceImages" :key="serviceImage">
+    <div class="col-xs-4 service-image" v-for="serviceImage in serviceImages" :key="serviceImage">
       <AnimatedServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
                             :croppedImagePath="serviceImage.croppedImagePath" :serviceUrl="serviceImage.serviceUrl"/>
     </div>
@@ -102,6 +102,10 @@ export default {
 </script>
 
 <style scoped>
+
+.service-image {
+  margin-right: -10px;
+}
 
 .work-with-us {
   text-align: center;

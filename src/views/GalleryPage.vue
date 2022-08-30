@@ -1,6 +1,6 @@
 <template>
   <PageHeader title="Bazar" meta="PORTFOLIO"/>
-  <div class="masonry animated fadeInUp">
+  <div class="masonry animated fadeInUp col-lg-12 col-xs-12 col-md-12">
     <img v-for="image in images" :key="image" class="image animated fadeInUp"
          :src="require(`@/assets/gallery/bazar/${image.name}.jpg`)"
          :alt="image.alt"/>
