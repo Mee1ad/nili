@@ -56,11 +56,6 @@ export default {
   methods: {
     sendFeedback() {
       const message = this.subject + this.email + this.number + this.message + this.salt;
-      console.log(this.subject)
-      console.log(this.email)
-      console.log(this.number)
-      console.log(this.message)
-      console.log(this.salt)
       this.token = md5(message);
       const postData = {
         email: this.email,
