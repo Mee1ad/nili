@@ -22,12 +22,12 @@
       <div class="contact-form">
         <h3 class="contact-heading">Contact Form</h3>
         <p>Interested to work wiht us?</p>
-        <form method="post" action="mail.php">
-          <input class="input" type="text" placeholder="Your Email"/>
-          <input class="input" type="text" placeholder="Your Number"/>
-          <input class="input" type="text" placeholder="Subject"/>
-          <textarea class="input" name="message" placeholder="Your Feedback" col="30" rows="7" spellcheck="false"/>
-          <button type="submit" class="submit">Send Message</button>
+        <form method="post">
+          <input class="input" type="text" placeholder="Your Email" v-model="email"/>
+          <input class="input" type="text" placeholder="Your Number" v-model="number"/>
+          <input class="input" type="text" placeholder="Subject" v-model="subject"/>
+          <textarea class="input" name="message" v-model="message" placeholder="Your Feedback" col="30" rows="7" spellcheck="false"/>
+          <button type="submit" class="submit" @click.prevent="sendFeedback()">Send Message</button>
         </form>
       </div>
     </div>
@@ -36,10 +36,42 @@
 
 <script>
 import PageHeader from "@/components/PageHeader";
+import axios from 'axios';
+
+var md5 = require("md5");
 
 export default {
   name: "ContactPage",
-  components: {PageHeader}
+  components: {PageHeader},
+  data: function() {
+    return {
+      email: "",
+      number: "",
+      subject: "",
+      message: "",
+      token: "",
+      salt: "%^&G&^*gfuyiy98t7fg98gfyu"
+    };
+  },
+  methods: {
+    sendFeedback() {
+      const message = this.subject + this.email + this.subject + this.message + this.salt;
+      this.token = md5(message);
+      const postData = {
+        email: this.email,
+        number: this.number,
+        subject: this.subject,
+        message: this.message,
+        token: this.token
+      };
+
+      axios
+          .post("https://nili-telegram-bot.vercel.app/api/feedback", postData)
+          .then(res => {
+            console.log(res.body);
+          });
+    }
+  }
 }
 </script>
 
@@ -57,6 +89,7 @@ export default {
   max-width: 45%;
   padding: 0 10px;
 }
+
 .contact-heading {
   color: #101010;
   font-family: 'Josefin Sans', sans-serif;
