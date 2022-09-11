@@ -64,7 +64,7 @@ export default {
         message: this.message,
         token: this.token
       };
-
+        console.log(this.token)
       axios
           .post("https://nili-telegram-bot.vercel.app/api/feedback", postData)
           .then(res => {
