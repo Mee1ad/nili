@@ -4,19 +4,18 @@
     <div class="row content animated fadeInUp">
       <div class="contact">
         <h3 class="contact-heading">I’m available for worldwide orders.</h3>
-        <p>Qualamy nisl sodales sit amet sapien id, placerat sodales orciter.
-          Vivamus nec magna rhoncus felis, faucibus printy.</p>
+        <br><br>
         <p>
           <b>Phone:</b>
-          +1 650-444-0000
+          +98 911 834 5796
         </p>
         <p>
           <b>Email:</b>
-          photo@annie.com
+          nilo.razaghi@gmail.com
         </p>
         <p>
           <b>Address:</b>
-          350 North First Street, San Jose, CA 95112, US.
+          Rasht, Gilan.
         </p>
       </div>
       <div class="contact-form">
@@ -87,6 +86,7 @@ export default {
 
 .contact {
   max-width: 45%;
+  width: 45%;
   padding: 0 10px;
 }
 
