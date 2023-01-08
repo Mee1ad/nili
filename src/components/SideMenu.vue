@@ -19,7 +19,7 @@
         </li>
       </ul>
       <ul class="footer">
-        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://t.me/Nilucheh" target="_blank"><i class="fa fa-telegram"></i></a></li>
         <li><a href="https://instagram.com/nilirazaghi" target="_blank"><i class="fa fa-instagram"></i></a></li>
         <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
       </ul>
@@ -32,7 +32,7 @@
 const menuItems = [
   {
     name: 'Home',
-    to: '/'
+    to: '/',
   },
   {
     name: 'About',
