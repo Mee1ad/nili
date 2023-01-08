@@ -26,37 +26,47 @@
 import FeedbackItem from "@/components/FeedbackItem";
 import PageHeader from "@/components/PageHeader";
 
+
 const feedbacks = [
   {
-    image_path: 'feedback/1.jpg',
-    name: 'Eleanor & Stefano',
-    instagram: 'username',
-    description: 'Annie non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat,' +
-        ' mollis sapien veli, conseyer turpeutionyer massa in libe semper sedeuter nunc volutpat,' +
-        ' mollis sapien veletion. Quisque gravida eros ut turpis interdum ornare. Interdum et malesu' +
-        ' they adamale fames ac ante ipsum primis in faucibus. Curabitur arcu erosite feugiat in tortor' +
-        ' in, volutpat sollicitudin libero.'
+    image_path: 'feedback/Amir & Mohad.png',
+    name: 'Mohad & Amir',
+    instagram: 'mohadese.hosseini1',
+    description: "I think it's been almost three years that I've posed in front of your camera. Each time I felt sth new" +
+        " . You stood in front of me and calmed me so professionally that I became your camera's friend." +
+        " Your split-shots are so special that I never stop looking at them. I was your subject of photography" +
+        " for many times but the best one was my pre-wedding day photography. The combination of us and fog was a" +
+        " very beautiful scene. I can't express how I felt about the pictures and I couldn't believe that you are the" +
+        " creator of what I see. You captured the true beauty of our feelings, Thank you for being so kind and " +
+        "patient Nili.\n"
   },
   {
-    image_path: 'feedback/2.jpg',
-    name: 'Freida & Pablo',
-    instagram: 'username',
-    description: 'Annie non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat,' +
-        ' mollis sapien veli, conseyer turpeutionyer massa in libe semper sedeuter nunc volutpat,' +
-        ' mollis sapien veletion. Quisque gravida eros ut turpis interdum ornare. Interdum et malesu' +
-        ' they adamale fames ac ante ipsum primis in faucibus. Curabitur arcu erosite feugiat in tortor' +
-        ' in, volutpat sollicitudin libero.'
+    image_path: 'feedback/Gisoo\'s Mom.png',
+    name: 'Gisoo’s Mom',
+    instagram: null,
+    description: 'I really liked my pictures. Specially the part that you could capture our feelings and' +
+        ' still whenever I watch my pictures I feel exhilarated. The compositions are also great, I loved it.' +
+        ' Thank you.'
+  },
+  {
+    image_path: 'feedback/Saeeide.png',
+    name: 'Saeeideh & Mojtaba',
+    instagram: 'saeidehjalali',
+    description: 'I love my pictures and moreover I love your energy, manner and work ethics.'
+  },
+  {
+    image_path: 'feedback/Nikan\'s Mom.png',
+    name: 'Nikan’s Mom',
+    instagram: '',
+    description: 'Girl what have you done to my face? It’s great! I love the retouch and the editing. I love them.'
   },
   {
     image_path: 'feedback/3.jpg',
-    name: 'Olivia & Enrico',
-    instagram: 'username',
-    description: 'Annie non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat,' +
-        ' mollis sapien veli, conseyer turpeutionyer massa in libe semper sedeuter nunc volutpat,' +
-        ' mollis sapien veletion. Quisque gravida eros ut turpis interdum ornare. Interdum et malesu' +
-        ' they adamale fames ac ante ipsum primis in faucibus. Curabitur arcu erosite feugiat in tortor' +
-        ' in, volutpat sollicitudin libero.'
-  }
+    name: 'Mr.Zareh',
+    instagram: '',
+    description: 'Thank you for your good edit and design. Your edit is good and neat. I hope we can work with' +
+        '  each other more.'
+  },
 ]
 export default {
   name: "FeedbackPage",
