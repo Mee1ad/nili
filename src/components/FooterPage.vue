@@ -4,7 +4,7 @@
       <h1>Nili Razaghi
         <span>PHOTOGRAPHER</span>
       </h1>
-    <p>© 2019 Nili by GCorp</p>
+    <p>© 2023 Nili by GCorp</p>
     </div>
   </div>
 </template>
