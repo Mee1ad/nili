@@ -8,13 +8,13 @@ import Contact from "@/views/ContactPage";
 import Gallery from "@/views/GalleryPage";
 
 const routes = [
-    {path: '/', name: 'Home', component: Home},
-    {path: '/about', name: 'About', component: About},
-    {path: '/services', name: 'Services', component: Services},
-    {path: '/services/:serviceName', name: 'Birthday', component: Birthday},
-    {path: '/gallery', name: 'Gallery', component: Gallery},
-    {path: '/feedback', name: 'Feedback', component: Feedback},
-    {path: '/contact', name: 'Contact', component: Contact},
+    {path: '/', name: 'Home', component: Home, meta: { title: 'Nili Razaghi' }},
+    {path: '/about', name: 'About', component: About, meta: { title: 'About Nili' }},
+    {path: '/services', name: 'Services', component: Services, meta: { title: 'Nili Services' }},
+    {path: '/services/:serviceName', name: 'Birthday', component: Birthday, meta: { title: 'Nili Razaghi' }},
+    {path: '/gallery', name: 'Gallery', component: Gallery, meta: { title: 'Nili Gallery' }},
+    {path: '/feedback', name: 'Feedback', component: Feedback, meta: { title: 'Nili Feedback' }},
+    {path: '/contact', name: 'Contact', component: Contact, meta: { title: 'Nili Contact' }},
 ]
 
 const router = createRouter({
@@ -24,5 +24,11 @@ const router = createRouter({
         return { top: 0 }
     },
 })
+
+router.beforeEach((to, from, next) => {
+    console.log(to);
+    document.title = to.meta.title;
+    next();
+});
 
 export default router
