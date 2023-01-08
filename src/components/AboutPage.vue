@@ -1,10 +1,10 @@
 <template>
   <div class="container animated fadeInUp col-xs-12">
-    <PageHeader title="About Me" meta="SENIOR"></PageHeader>
+    <PageHeader title="About Me" meta=""></PageHeader>
     <div class="about-image"></div>
     <div class="content">
       <SPAN class="heading-meta">PHOTOGRAPHER</SPAN>
-      <h3 class="about-heading">Annie McCury</h3>
+      <h3 class="about-heading">Nili Razaghi</h3>
       <p>Quisque bibendum tincidunt varius. Vestibulum viverra bibendum magna, mattis gravida sapien tincidunt ut. Donec
         felis nunc, dapibus quis facilisis quis, placerat vitae massa. Curabitur consectetur mi tellus, in dignissim
         nibh maximus tempus. Cras vel metus nec eros laoreet ullamcorper sed sit amet lectus. Vivamus orci mi, malesuada

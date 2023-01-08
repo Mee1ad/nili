@@ -1,10 +1,10 @@
 <template>
   <div class="footer">
     <div class="footer-content">
-      <h1>Annie McCury
+      <h1>Nili Razaghi
         <span>PHOTOGRAPHER</span>
       </h1>
-    <p>© 2019 Annie by webRedox</p>
+    <p>© 2019 Nili by GCorp</p>
     </div>
   </div>
 </template>

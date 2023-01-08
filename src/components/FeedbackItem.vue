@@ -2,8 +2,13 @@
   <div class="container">
     <img class="avatar" :src="require(`@/assets/${image_path}`)">
     <h3 class="avatar-title">{{ name }}</h3>
-    <a href="#" class="meta">instagram.com/{{ instagram }}</a>
-    <p class="description">{{description}}</p>
+    <div v-if="instagram">
+      <a :href="`https://instagram.com/${instagram}`" class="meta">@{{ instagram }}</a>
+    </div>
+    <div v-else>
+      <br>
+    </div>
+    <p class="description">{{ description }}</p>
   </div>
 </template>
 
@@ -24,6 +29,7 @@ export default {
   display: inline;
 
 }
+
 .avatar {
   width: 100px;
   border-radius: 100%;
