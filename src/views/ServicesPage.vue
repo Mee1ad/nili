@@ -10,7 +10,8 @@
     <span class="heading-meta">INTERESTED TO WORK WITH US?</span>
     <router-link to="/contact" class="button"> Contact With Us</router-link>
   </div>
-  <PageHeader title="Pricing" meta="PACKAGES"/>
+<!--  <PageHeader title="Pricing" meta="PACKAGES"/>-->
+  <PageHeader title="" meta=""/>
   <!--  <PackageCard class="col-xs-4" image_path="pricing/1.jpg" name="Standard" price="300" item1="3 Hours Session"-->
   <!--               item2="Photo Editing" item3="50 Digital Images" item4="Online Gallery"></PackageCard>-->
   <div class="row card animated fadeInUp">
@@ -60,33 +61,33 @@ const serviceImages = [
   }
 ]
 const packagesList = [
-  {
-    image_path: 'pricing/1.jpg',
-    name: 'Standard',
-    price: '300',
-    items1: "3 Hours Session",
-    items2: 'Photo Editing',
-    items3: '50 Digital Images',
-    items4: 'Online Gallery'
-  },
-  {
-    image_path: 'pricing/2.jpg',
-    name: 'Premium',
-    price: '450',
-    items1: "6 Hours Session",
-    items2: 'Photo Editing',
-    items3: '100 Digital Images',
-    items4: 'Online Gallery'
-  },
-  {
-    image_path: 'pricing/3.jpg',
-    name: 'Platinum',
-    price: '750',
-    items1: "12 Hours Session",
-    items2: 'Photo Editing',
-    items3: '250 Digital Images',
-    items4: 'Online Gallery'
-  }
+  // {
+  //   image_path: 'pricing/1.jpg',
+  //   name: 'Standard',
+  //   price: '300',
+  //   items1: "3 Hours Session",
+  //   items2: 'Photo Editing',
+  //   items3: '50 Digital Images',
+  //   items4: 'Online Gallery'
+  // },
+  // {
+  //   image_path: 'pricing/2.jpg',
+  //   name: 'Premium',
+  //   price: '450',
+  //   items1: "6 Hours Session",
+  //   items2: 'Photo Editing',
+  //   items3: '100 Digital Images',
+  //   items4: 'Online Gallery'
+  // },
+  // {
+  //   image_path: 'pricing/3.jpg',
+  //   name: 'Platinum',
+  //   price: '750',
+  //   items1: "12 Hours Session",
+  //   items2: 'Photo Editing',
+  //   items3: '250 Digital Images',
+  //   items4: 'Online Gallery'
+  // }
 ]
 export default {
   name: "ServicesView",
