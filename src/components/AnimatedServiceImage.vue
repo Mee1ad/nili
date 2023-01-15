@@ -40,7 +40,7 @@ export default {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  color: white;
+  color: var(--normal-text-color);
   font-weight: 900;
 }
 
@@ -50,7 +50,7 @@ export default {
 
 .caption > h3 {
   backdrop-filter: blur(2px) saturate(100%);
-  color: white;
+  color: var(--normal-text-color);
   font-size: 20px;
   margin-top: 10px;
 }
@@ -127,7 +127,7 @@ export default {
 .glassBox__title {
   text-align: center;
   margin-top: 15px;
-  color: #fff;
+  color: var(--normal-text-color);
   font-size: 20px;
   font-weight: 400;
   font-family: "Lato";
@@ -139,7 +139,7 @@ export default {
   bottom: 15px;
   left: 15px;
   text-align: center;
-  color: #fff;
+  color: var(--normal-text-color);
   font-size: 14px;
   font-family: "Lato";
   letter-spacing: 0.1em;

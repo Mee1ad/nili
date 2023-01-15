@@ -99,7 +99,7 @@ export default {
   margin-top: 0;
   text-align: center;
   text-transform: uppercase;
-  color: #777;
+  color: var(--p);
   letter-spacing: 2px;
   line-height: 1.5em;
 }
@@ -111,7 +111,7 @@ export default {
   height: 100vh;
   box-shadow: 1px 1px 20px 0 #99999924;
   z-index: 99;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
 
 .side-menu-placeholder {
@@ -131,7 +131,7 @@ export default {
 }
 
 .menu-item {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--border);
   margin: 15px 0 0 0;
   padding: 0 0 10px 0;
   line-height: 1.5em;
@@ -139,7 +139,7 @@ export default {
 }
 
 .menu-item > a {
-  color: #888;
+  color: var(--caption-color);
   transition: 0.5s;
 }
 
@@ -151,14 +151,14 @@ export default {
   font-size: 15px;
   text-align: center;
   font-weight: 400;
-  color: #888;
+  color: var(--caption-color);
   padding: 30px;
 }
 
 .footer > li {
   display: inline-block;
   margin: 5px;
-  background-color: #ececec;
+  background-color: var(--footer-li);
   width: 40px;
   height: 40px;
   line-height: 47px;
@@ -167,7 +167,7 @@ export default {
 }
 
 .footer > li > a {
-  color: black;
+  color: var(--a);
 }
 
 .footer > li > a > i {
@@ -176,12 +176,12 @@ export default {
 
 a:hover {
   transition: 0.5s;
-  color: black;
+  color: var(--a);
 
 }
 
 .menu-items > li > a[active] {
-  color: black;
+  color: var(--a);
 }
 
 </style>

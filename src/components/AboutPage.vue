@@ -46,7 +46,7 @@ export default {
 }
 
 .about-heading {
-  color: #101010;
+  color: var(--b);
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 30px;

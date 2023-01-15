@@ -24,8 +24,8 @@ export default {
   data:()=>{
     const images = []
 
-    for (let i =0;i<18;i++){
-      images.push(require(`../assets/home/album/${i+1}.jpg`))
+    for (let i =0;i<14;i++){
+      images.push(require(`../assets/home/album/${i}.webp`))
     }
 
     return {
@@ -78,7 +78,7 @@ export default {
   padding: 70px 220px 10px 200px;
   text-align: center;
   line-height: 1.5;
-  color: #777;
+  color: var(--heading-meta);
 }
 
 .sign {

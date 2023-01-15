@@ -91,7 +91,7 @@ export default {
 }
 
 .contact-heading {
-  color: #101010;
+  color: var(--text-color);
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -103,8 +103,8 @@ export default {
 
 .input {
   height: auto;
-  background-color: #f7f7f7;
-  color: #777;
+  background-color: var(--input-bg);
+  color: var(--p);
   font-size: 15px;
   line-height: 1.5em;
   font-weight: 400;

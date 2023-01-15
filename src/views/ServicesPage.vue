@@ -115,16 +115,16 @@ export default {
 
 .work-with-us > a {
   margin-top: 10px;
-  background-color: black;
+  background-color: var(--button-bg);
   padding: 10px 30px;
   display: inline-block;
-  color: #ccc;
+  color: var(--submit);
   border-radius: 50px;
   transition: 0.5s;
 }
 
 .work-with-us > a:hover {
-  color: white;
+  color: var(--normal-text-color);
 }
 
 .row > div:nth-child(2) > div {

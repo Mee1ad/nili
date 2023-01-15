@@ -52,14 +52,14 @@ export default {
 .caption {
   position: absolute;
   top: 100px;
-  color: white;
+  color: var(--normal-text-color);
   font-weight: 900;
   width: 100%;
   text-align: center;
 }
 
 .caption > h3 {
-  color: #fff;
+  color: #var(--normal-text-color);
   display: block;
   box-sizing: border-box;
   font-size: 17px;
@@ -73,20 +73,20 @@ export default {
   vertical-align: middle;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: var(--normal-text-color);
 }
 
 .caption > ul > li {
   line-height: 2em;
   font-size: 15px;
   font-weight: 400;
-  color: #999;
+  color: var(--li);
 }
 
 .pricing-dollar {
   position: relative;
   bottom: 2px;
-  color: #fff;
+  color: var(--normal-text-color);
   font-size: 17px;
   line-height: 1em;
   font-weight: 400;

@@ -34,7 +34,7 @@ export default {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  color: white;
+  color: var(--normal-text-color);
   font-weight: 900;
 }
 
@@ -43,7 +43,7 @@ export default {
 }
 
 .caption > h3 {
-  color: white;
+  color: var(--normal-text-color);
   font-size: 20px;
   margin-top: 10px;
 }

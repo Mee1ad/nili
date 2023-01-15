@@ -17,8 +17,7 @@ export default {
 
 <style scoped>
 .footer-content {
-  background-color: black;
-  color: white;
+  background-color: var(--footer-background);
   text-align: center;
   padding: 40px 0 50px 0;
   margin-top: 60px;
@@ -29,13 +28,13 @@ export default {
   font-weight: 700;
   font-size: 30px;
   line-height: 1.5em;
-  color: #fff;
+  color: var(--normal-text-color);
 }
 
 .footer-content > h1 > span {
   font-size: 12px;
   text-transform: uppercase;
-  color: #888;
+  /*color: #888;*/
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.3em;
@@ -47,7 +46,7 @@ export default {
 .footer-content > p {
   font-size: 12px;
   line-height: 1.5em;
-  color: #888;
+  color: var(--caption-color);
   margin-bottom: 0;
 }
 </style>

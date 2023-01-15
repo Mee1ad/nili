@@ -38,7 +38,7 @@ export default {
 
 .avatar-title {
   display: inline-block;
-  color: #101010;
+  color: var(--text-color);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5em;
@@ -47,8 +47,10 @@ export default {
   margin-left: 130px;
 }
 
+
+
 .meta {
-  color: #777;
+  color: var(--heading-meta);
   margin-bottom: 15px;
   font-size: 12px;
   font-weight: 400;
@@ -59,7 +61,7 @@ export default {
 .description {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5em;
-  color: #777;
+  color: var(--heading-meta);
   margin-left: 145px;
 }
 </style>

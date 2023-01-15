@@ -24,7 +24,7 @@ export default {
 
 
 .title {
-  color: #101010;
+  color: var(--text-color);
   font-family: 'Josefin Sans', sans-serif;
   margin: 0px 0 30px 0;
   font-weight: 700;

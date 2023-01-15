@@ -101,7 +101,7 @@ export default {
 
 .create-feedback > h3 {
   margin-bottom: 50px;
-  color: #101010;
+  color: var(--b);
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -120,7 +120,7 @@ export default {
 .fa-camera {
   font-size: 50px;
   margin-top: 25px;
-  color: white;
+  color: var(--normal-text-color);
 }
 
 .form-group {
@@ -131,8 +131,8 @@ export default {
 .input {
   height: auto;
   width: 90%;
-  background-color: #f7f7f7;
-  color: #777;
+  background-color: var(--input-bg);
+  color: var(--p);
   font-size: 15px;
   line-height: 1.5em;
   font-weight: 400;
@@ -144,7 +144,7 @@ export default {
 }
 
 .submit:hover {
-  color: #fff;
+  color: var(--normal-text-color);
   cursor: pointer;
 }
 </style>

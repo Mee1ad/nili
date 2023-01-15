@@ -123,7 +123,7 @@ export default {
 
 .progress-wrap::after {
   mix-blend-mode: difference;
-  color: gray;
+  color: var(--progress);
   position: absolute;
   font-family: 'unicons';
   content: '\e82d';
