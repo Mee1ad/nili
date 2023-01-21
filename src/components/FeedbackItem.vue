@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <section class="section">
     <img class="avatar" :src="require(`@/assets/${image_path}`)">
     <h3 class="avatar-title">{{ name }}</h3>
     <div v-if="instagram">
@@ -9,7 +9,7 @@
       <br>
     </div>
     <p class="description">{{ description }}</p>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -31,9 +31,11 @@ export default {
 }
 
 .avatar {
-  width: 100px;
+  width: 100px !important;
+  max-width: 100px !important;
   border-radius: 100%;
   position: absolute;
+  margin-top: -10px;
 }
 
 .avatar-title {
@@ -48,20 +50,48 @@ export default {
 }
 
 
-
 .meta {
   color: var(--heading-meta);
   margin-bottom: 15px;
   font-size: 12px;
   font-weight: 400;
   display: block;
-  margin-left: 145px;
+  margin-left: 130px;
 }
 
 .description {
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5em;
   color: var(--heading-meta);
-  margin-left: 145px;
+  margin-left: 130px;
 }
+
+@media screen and (max-width: 768px) {
+  .avatar-title, .meta, .description {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 1rem 1rem;
+  }
+  .avatar{
+    position: inherit;
+    display: block;
+    margin-bottom: 15px
+
+  }
+  .section {
+    text-align: -webkit-center;
+  }
+}
+
+
 </style>

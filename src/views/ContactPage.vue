@@ -115,4 +115,14 @@ export default {
   font-family: 'Josefin Sans', sans-serif;
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  .contact, .contact-form {
+    width: 100%;
+    max-width: 100%;
+    text-align-last: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
 </style>

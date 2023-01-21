@@ -1,34 +1,42 @@
 <template>
-  <link href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet">
-  <div class="side-menu">
-    <div class="side-menu-content">
-      <router-link class="logo" to="/">
-        <img class="logo-image" src="../assets/logo.png">
-      </router-link>
-      <font-awesome-icon icon="fa-solid fa-user-secret"/>
-      <a class="typo">
-        Nili Razaghi
-        <span>PHOTOGRAPHER</span>
-      </a>
-      <ul class="menu-items">
-        <li class="menu-item" v-for="menuItem in menuItems" :key="menuItem">
-          <router-link :to="menuItem.to" :active="$route.fullPath === menuItem.to?'':undefined">{{
-              menuItem.name
-            }}
-          </router-link>
-        </li>
-      </ul>
-      <ul class="footer">
-        <li><a href="https://t.me/Nilucheh" target="_blank"><i class="fa fa-telegram"></i></a></li>
-        <li><a href="https://instagram.com/nilirazaghi" target="_blank"><i class="fa fa-instagram"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
-      </ul>
-    </div>
+  <div class="burger-background">
+    <BurgerMenu class="burger-button" v-if="isMobile" @click="isOpen = !isOpen"></BurgerMenu>
   </div>
-  <div class="side-menu-placeholder"/>
+    <div :class="{ 'open': isOpen || !isMobile, 'side-menu': true }">
+      {{isMobile}}
+      {{isOpen}}
+      <CrossCloseBTN class="delete" v-if="isMobile && isOpen" @click="isOpen = !isOpen"></CrossCloseBTN>
+      <div class="side-menu-content">
+        <router-link class="logo" to="/">
+          <img class="logo-image" src="../assets/logo.png">
+        </router-link>
+        <font-awesome-icon icon="fa-solid fa-user-secret"/>
+        <a class="typo">
+          Nili Razaghi
+          <span>PHOTOGRAPHER</span>
+        </a>
+        <ul class="menu-items">
+          <li class="menu-item" v-for="menuItem in menuItems" :key="menuItem" @click="isOpen = !isOpen">
+            <router-link :to="menuItem.to" :active="$route.fullPath === menuItem.to?'':undefined">{{
+                menuItem.name
+              }}
+            </router-link>
+          </li>
+        </ul>
+        <ul class="footer">
+          <li><a href="https://t.me/Nilucheh" target="_blank"><i class="fa fa-telegram"></i></a></li>
+          <li><a href="https://instagram.com/nilirazaghi" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="side-menu-placeholder is-hidden-mobile"/>
 </template>
 
 <script>
+import BurgerMenu from "@/components/BurgerMenu";
+import CrossCloseBTN from "@/components/CrossCloseBTN";
+
 const menuItems = [
   {
     name: 'Home',
@@ -57,20 +65,45 @@ const menuItems = [
 ]
 export default {
   name: 'HelloWorld',
+  components: {
+    CrossCloseBTN,
+    BurgerMenu
+  },
   props: {
     msg: String
   },
   data: () => {
     return {
-      menuItems
+      menuItems,
+      isMobile: window.innerWidth < 768,
+      isOpen: false
     };
-  }
+  },
+  mounted() {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    } else {
+      this.isOpen = true
+    }
+    window.addEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      if (window.innerWidth < 768) {
+        this.isMobile = true;
+        this.isOpen = false;
+      } else {
+        this.isMobile = false
+      }
+    }
+  },
 }
 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .logo {
   display: inline-block;
   text-align: center;
@@ -184,4 +217,50 @@ a:hover {
   color: var(--a);
 }
 
+@media screen and (max-width: 767px) {
+  .side-menu {
+    width: 100%;
+    max-width: 100%;
+    transition: all 200ms linear;
+  }
+}
+
+.side-menu:not(.open) {
+  transform: translateX(-100%);
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.delete {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+  color: black;
+  cursor: pointer;
+  background-color: unset;
+  max-width: unset;
+  width: 40px;
+  height: unset;
+}
+
+.burger-background {
+  background: #49494973;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  backdrop-filter: blur(10px);
+}
+
+.navbar-burger {
+  margin: 0;
+}
+
+.burger-button {
+  margin-left: 10px;
+  opacity: 0.7;
+}
 </style>

@@ -18,6 +18,7 @@
     --progress: gray;
     --input-bg: rgba(63, 63, 63, 0.06);
     --border: #ececec;
+    --button-bg: black;
 }
 
 body[theme="dark"] {
@@ -44,6 +45,7 @@ body[theme="dark"] {
 
 body {
     background-color: var(--background-color);
+    width: 100vw;overflow-x: hidden
 }
 
 
@@ -87,6 +89,7 @@ p {
     margin: 0 0 20px;
     color: var(--p);
     font-weight: 400;
+    text-align: justify;
 }
 
 b, strong {
@@ -232,4 +235,16 @@ body::-webkit-scrollbar {
         opacity: 1;
     }
 
+}
+
+.b-menu {
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+.mobile-navbar-margin {
+    height: 51px;
 }

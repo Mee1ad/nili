@@ -8,8 +8,10 @@
     </div>
     <div class="create-feedback animated fadeInUp">
       <h3>Leave Feedback</h3>
-      <div class="feedback-image-placeholder">
-        <i class="fa fa-camera"></i>
+      <div class="feedback-image-container">
+        <div class="feedback-image-placeholder">
+          <i class="fa fa-camera"></i>
+        </div>
       </div>
       <div class="form-group">
         <input class="input" type="text" placeholder="Your Name"/>
@@ -146,5 +148,19 @@ export default {
 .submit:hover {
   color: var(--normal-text-color);
   cursor: pointer;
+}
+
+.feedback-item {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-image-placeholder {
+    position: inherit;
+  }
+  .feedback-image-container, .form-group{
+    text-align: center;
+    margin: 20px;
+  }
 }
 </style>

@@ -1,10 +1,14 @@
 <template>
   <PageHeader title="Bazar" meta="PORTFOLIO"/>
-  <div class="masonry animated fadeInUp col-lg-12 col-xs-12 col-md-12">
-    <img v-for="image in images" :key="image" class="image animated fadeInUp"
-         :src="require(`@/assets/gallery/bazar/${image.name}.jpg`)"
-         :alt="image.alt"/>
-  </div>
+  <section class="section">
+    <div class="container columns is-12 is-multiline">
+      <div class="masonry animated fadeInUp ">
+        <img v-for="image in images" :key="image" class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile"
+             :src="require(`@/assets/gallery/bazar/${image.name}.jpg`)"
+             :alt="image.alt"/>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>

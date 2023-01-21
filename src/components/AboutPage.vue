@@ -45,6 +45,13 @@ export default {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .about-image {
+    height: 57vw;
+
+  }
+}
+
 .about-heading {
   color: var(--b);
   font-family: 'Josefin Sans', sans-serif;

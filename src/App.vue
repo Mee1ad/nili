@@ -3,8 +3,10 @@
 <template>
   <div class="root">
     <ScrollProgress />
-    <SideMenu msg="Welcome to Your Vue.js App"/>
+    <SideMenu/>
+
     <div class="main-content">
+
       <router-view/>
       <FooterPage msg="test"/>
     </div>
@@ -26,7 +28,8 @@ export default {
     SideMenu,
     FooterPage,
     ScrollProgress
-  }
+  },
+
 }
 
 </script>

@@ -33,7 +33,7 @@ export default {
 
 .image-holder {
   width: 100%;
-  margin: 10px;
+  /*margin: 10px;*/
 }
 
 .caption {

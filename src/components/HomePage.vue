@@ -1,41 +1,70 @@
 <template>
-  <div class="container animated fadeIn">
-    <ul class="home-slider">
-      <li class="slider"></li>
-    </ul>
-    <div class="about">
-      <p class="about-me">While there is perhaps a province in which the photograph can tell us nothing more than what we see with our
-        own
-        eyes, there is another in which it proves to us how little our eyes permit us to see.</p>
-      <img class="sign" src="../assets/home/sign.png">
+  <div class="mobile-navbar-margin" v-if="isMobile"></div>
+  <ul class="home-slider">
+    <li class="slider"></li>
+  </ul>
+  <section class="section container">
+    <div class="columns is-desktop">
+      <div class="column is-12">
+        <section class="section">
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-10-desktop is-12-tablet">
+                <p class="about-me">
+                  While there is perhaps a province in which the photograph can tell us nothing more
+                  than what
+                  we see with our
+                  own
+                  eyes, there is another in which it proves to us how little our eyes permit us to see.</p>
+                <img class="sign" src="../assets/home/sign.png">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container">
+            <div class="columns is-multiline">
+              <ul class="album">
+                <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images" :key="index">
+                  <img :src="index" alt="" class="img-responsive">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-
-    <ul class="album">
-      <li class="album-image" v-for="index in images" :key="index">
-        <img :src="index" alt="selectedDog">
-      </li>
-    </ul>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
   name: "HomePage",
-  data:()=>{
+  data: () => {
     const images = []
 
-    for (let i =0;i<14;i++){
+    for (let i = 0; i < 14; i++) {
       images.push(require(`../assets/home/album/${i}.webp`))
     }
 
     return {
-      images
+      images,
+      isMobile: false,
     };
+  },
+  mounted() {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false
+    }
   }
 }
 </script>
 
 <style scoped>
+
+
 .container {
   width: 100%;
 }
@@ -52,6 +81,13 @@ export default {
   animation-name: example;
   animation-duration: 20s;
   animation-iteration-count: infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 67vw;
+
+  }
 }
 
 
@@ -75,7 +111,7 @@ export default {
 
 .about-me {
   font-size: 20px;
-  padding: 70px 220px 10px 200px;
+  /*padding: 0px 110px 10px 110px;*/
   text-align: center;
   line-height: 1.5;
   color: var(--heading-meta);
@@ -91,7 +127,7 @@ export default {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 0 0 15px;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .album-image {

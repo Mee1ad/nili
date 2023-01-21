@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="">
     <div class="footer-content">
       <h1>Nili Razaghi
         <span>PHOTOGRAPHER</span>
@@ -48,5 +48,6 @@ export default {
   line-height: 1.5em;
   color: var(--caption-color);
   margin-bottom: 0;
+  text-align: center;
 }
 </style>

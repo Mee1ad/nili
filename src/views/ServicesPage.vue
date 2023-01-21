@@ -1,16 +1,22 @@
 <template>
   <PageHeader meta="WHAT WE DO" title="Services"></PageHeader>
-  <div class="row">
-    <div class="col-xs-4 service-image" v-for="serviceImage in serviceImages" :key="serviceImage">
-      <AnimatedServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
-                            :croppedImagePath="serviceImage.croppedImagePath" :serviceUrl="serviceImage.serviceUrl"/>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="service-image column is-4-desktop is-6-tablet is-12-mobile" v-for="serviceImage in serviceImages"
+             :key="serviceImage">
+          <AnimatedServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
+                                :croppedImagePath="serviceImage.croppedImagePath"
+                                :serviceUrl="serviceImage.serviceUrl"/>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
   <div class="work-with-us animated fadeInUp">
     <span class="heading-meta">INTERESTED TO WORK WITH US?</span>
     <router-link to="/contact" class="button"> Contact With Us</router-link>
   </div>
-<!--  <PageHeader title="Pricing" meta="PACKAGES"/>-->
+  <!--  <PageHeader title="Pricing" meta="PACKAGES"/>-->
   <PageHeader title="" meta=""/>
   <!--  <PackageCard class="col-xs-4" image_path="pricing/1.jpg" name="Standard" price="300" item1="3 Hours Session"-->
   <!--               item2="Photo Editing" item3="50 Digital Images" item4="Online Gallery"></PackageCard>-->
@@ -104,10 +110,6 @@ export default {
 
 <style scoped>
 
-.service-image {
-  margin-right: -10px;
-}
-
 .work-with-us {
   text-align: center;
   margin-top: 80px;
@@ -146,4 +148,11 @@ export default {
 .row > div:nth-child(6) > div {
   animation-delay: 1s;
 }
+
+@media screen and (min-width: 1024px){
+  .section {
+    /*padding: 3rem 3rem;*/
+  }
+}
+
 </style>
