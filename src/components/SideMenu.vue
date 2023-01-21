@@ -240,7 +240,8 @@ a:hover {
   cursor: pointer;
   background-color: unset;
   max-width: unset;
-  width: 40px;
+  max-height: unset;
+  width: 30px;
   height: unset;
 }
 
