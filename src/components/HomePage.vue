@@ -26,7 +26,7 @@
             <div class="columns is-multiline">
               <ul class="album">
                 <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images" :key="index">
-                  <img :src="index" alt="" class="img-responsive">
+                  <img :src="index" alt="" class="img-responsive animated fadeInUp">
                 </li>
               </ul>
             </div>
@@ -138,4 +138,61 @@ export default {
 .album-image img {
   width: 100%;
 }
+
+.album > li:nth-child(1) > img {
+  animation-delay: 0.2s;
+}
+
+.album > li:nth-child(2) > img {
+  animation-delay: 0.4s;
+}
+
+.album > li:nth-child(3) > img {
+  animation-delay: 0.6s;
+}
+
+.album > li:nth-child(4) > img {
+  animation-delay: 0.8s;
+}
+
+.album > li:nth-child(5) > img {
+  animation-delay: 1s;
+}
+
+.album > li:nth-child(6) > img {
+  animation-delay: 1.2s;
+}
+
+.album > li:nth-child(7) > img {
+  animation-delay: 1.4s;
+}
+
+.album > li:nth-child(8) > img {
+  animation-delay: 1.6s;
+}
+
+.album > li:nth-child(9) > img {
+  animation-delay: 1.8s;
+}
+
+.album > li:nth-child(10) > img {
+  animation-delay: 2s;
+}
+
+.album > li:nth-child(11) > img {
+  animation-delay: 2.2s;
+}
+
+.album > li:nth-child(12) > img {
+  animation-delay: 2.4s;
+}
+
+.album > li:nth-child(13) > img {
+  animation-delay: 2.6s;
+}
+
+.album > li:nth-child(14) > img {
+  animation-delay: 2.8s;
+}
+
 </style>

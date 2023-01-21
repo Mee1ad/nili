@@ -3,8 +3,6 @@
     <BurgerMenu class="burger-button" v-if="isMobile" @click="isOpen = !isOpen"></BurgerMenu>
   </div>
     <div :class="{ 'open': isOpen || !isMobile, 'side-menu': true }">
-      {{isMobile}}
-      {{isOpen}}
       <CrossCloseBTN class="delete" v-if="isMobile && isOpen" @click="isOpen = !isOpen"></CrossCloseBTN>
       <div class="side-menu-content">
         <router-link class="logo" to="/">

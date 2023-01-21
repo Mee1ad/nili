@@ -149,9 +149,15 @@ export default {
   animation-delay: 1s;
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
   .section {
     /*padding: 3rem 3rem;*/
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+     padding: unset;
   }
 }
 
