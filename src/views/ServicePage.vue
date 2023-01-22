@@ -17,8 +17,8 @@
       Sedeuter nunc volutpat, mollis sapien vel, conseyer turpeutionyer massa in libero semper. Fusceler mollis augue
       sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Fusce mollis augue sit amet hendrerit
       vestibulum.</p>
-    <div class="masonry">
-      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp"
+    <div class="columns is-multiline">
+      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp column is-4-desktop is-6-tablet is-12-mobile"
            :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
            :alt="image.alt"/>
     </div>

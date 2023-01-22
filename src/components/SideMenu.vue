@@ -5,14 +5,14 @@
     <div :class="{ 'open': isOpen || !isMobile, 'side-menu': true }">
       <CrossCloseBTN class="delete" v-if="isMobile && isOpen" @click="isOpen = !isOpen"></CrossCloseBTN>
       <div class="side-menu-content">
-        <router-link class="logo" to="/">
+        <router-link class="logo" to="/" @click="isOpen = !isOpen">
           <img class="logo-image" src="../assets/logo.png">
         </router-link>
         <font-awesome-icon icon="fa-solid fa-user-secret"/>
-        <a class="typo">
+        <router-link class="typo" to="/" @click="isOpen = !isOpen">
           Nili Razaghi
           <span>PHOTOGRAPHER</span>
-        </a>
+        </router-link>
         <ul class="menu-items">
           <li class="menu-item" v-for="menuItem in menuItems" :key="menuItem" @click="isOpen = !isOpen">
             <router-link :to="menuItem.to" :active="$route.fullPath === menuItem.to?'':undefined">{{
@@ -184,6 +184,7 @@ export default {
   font-weight: 400;
   color: var(--caption-color);
   padding: 30px;
+  background-color: unset;
 }
 
 .footer > li {
@@ -251,7 +252,7 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 99;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
 }
 
 .navbar-burger {
