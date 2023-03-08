@@ -20,7 +20,8 @@
                   we see with our
                   own
                   eyes, there is another in which it proves to us how little our eyes permit us to see.</p>
-                <img class="sign" src="../assets/home/sign.png">
+<!--                <img class="sign" src="../assets/home/sign.png">-->
+                <ImageSkeleton class="sign" :imageSrc="require(`@/assets/home/sign.png`)" :alt="'Image'" :h="`65px`"/>
               </div>
             </div>
           </div>
@@ -31,7 +32,7 @@
               <ul class="album">
                 <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images"
                     :key="index">
-                  <ImageSkeleton :imageSrc="index" :alt="'Image'"
+                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :h="`525px`"
                                  class="img-responsive animated fadeInUp"></ImageSkeleton>
                 </li>
               </ul>
