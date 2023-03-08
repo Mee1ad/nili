@@ -3,8 +3,9 @@
     <PageHeader
         :title="this.$route.params.serviceName.charAt(0).toUpperCase() + this.$route.params.serviceName.slice(1)"
         meta="SERVICES"/>
-    <img class="header-image animated fadeInUp"
-         :src="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"/>
+
+    <ImageSkeleton :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"
+                   :alt="'Image'" h="573px" class="header-image animated fadeInUp"></ImageSkeleton>
     <p>Yuroin non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat, mollis sapien vel, conseyer
       turpeutionyer masin libero sempe. Fusceler mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis
       lacus. Fusce mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Yuroin non lorem ac erat
@@ -17,17 +18,28 @@
       Sedeuter nunc volutpat, mollis sapien vel, conseyer turpeutionyer massa in libero semper. Fusceler mollis augue
       sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Fusce mollis augue sit amet hendrerit
       vestibulum.</p>
-    <div class="columns is-multiline">
-      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp column is-4-desktop is-6-tablet is-12-mobile"
-           :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
-           :alt="image.alt"/>
+    <!--    <div class="columns is-multiline">-->
+    <!--      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp column is-4-desktop is-6-tablet is-12-mobile"-->
+    <!--           :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"-->
+    <!--           :alt="image.alt"/>-->
+    <!--    </div>-->
+    <div class="masonry">
+<!--      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp"-->
+<!--           :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"-->
+<!--           :alt="image.alt"/>-->
+
+      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image"
+                     :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
+                     :alt="image.alt" class="image animated fadeInUp"></ImageSkeleton>
+
+
     </div>
   </div>
 </template>
 
 <script>
 import PageHeader from "@/components/PageHeader";
-
+import ImageSkeleton from "@/components/ImageSkeleton";
 // const serviceName = this.$route.params.serviceName
 const images = {
   'birthday': [
@@ -92,17 +104,24 @@ const images = {
       'alt': 'test'
     },
     {
+      'name': '11',
+      'alt': 'test'
+    },
+    {
       'name': '8',
       'alt': 'test'
     },
+
     {
       'name': '9',
       'alt': 'test'
     },
+
     {
       'name': '10',
       'alt': 'test'
-    }
+    },
+
   ],
   'portrait': [
     {
@@ -217,7 +236,7 @@ const items = [
 
 export default {
   name: "ServicePage",
-  components: {PageHeader},
+  components: {PageHeader, ImageSkeleton},
   // props: {
   //   images: {required: true, type: Array},
   // },
@@ -232,6 +251,7 @@ export default {
 </script>
 
 <style scoped>
+
 .parent {
   margin: 0 30px;
 }
@@ -245,7 +265,7 @@ export default {
   margin-bottom: 100px;
 }
 
-.col-xs-4 {
-  padding: 12px 12px;
+.image {
+  display: inline-block;
 }
 </style>

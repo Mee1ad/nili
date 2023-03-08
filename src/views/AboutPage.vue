@@ -1,7 +1,8 @@
 <template>
   <div class="container animated fadeInUp col-xs-12">
     <PageHeader title="About Me" meta=""></PageHeader>
-    <div class="about-image"></div>
+    <ImageSkeleton class="about-image"
+                   :imageSrc="require(`@/assets/about/01.webp`)" :alt="`Nili`" :w="`100%`" :h="`100vh`"/>
     <div class="content">
       <SPAN class="heading-meta">PHOTOGRAPHER</SPAN>
       <h3 class="about-heading">Nili Razaghi</h3>
@@ -20,9 +21,11 @@
 
 <script>
 import PageHeader from "@/components/PageHeader";
+import ImageSkeleton from "@/components/ImageSkeleton.vue";
+
 export default {
   name: "AboutPage",
-  components: {PageHeader},
+  components: {PageHeader, ImageSkeleton},
   data() {
     return {
       title: 'Blog'
@@ -37,11 +40,7 @@ export default {
 }
 
 .about-image {
-  background-size: cover;
   height: 100vh;
-  background-image: url("../assets/about/01.webp");
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
   margin-bottom: 30px;
 }
 

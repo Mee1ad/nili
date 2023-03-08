@@ -3,9 +3,14 @@
   <section class="section">
     <div class="container columns is-12 is-multiline">
       <div class="masonry animated fadeInUp ">
-        <img v-for="image in images" :key="image" class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile"
-             :src="require(`@/assets/gallery/bazar/${image.name}.jpg`)"
-             :alt="image.alt"/>
+        <div v-for="image in images" :key="image"
+             class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile">
+          <ImageSkeleton :w="`100%`" :h="`350px`"
+                         :imageSrc="require(`@/assets/gallery/bazar/${image.name}.jpg`)" :alt="image.alt"/>
+        </div>
+        <!--        <img v-for="image in images" :key="image" class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile"-->
+        <!--             :src="require(`@/assets/gallery/bazar/${image.name}.jpg`)"-->
+        <!--             :alt="image.alt"/>-->
       </div>
     </div>
   </section>
@@ -13,6 +18,7 @@
 
 <script>
 import PageHeader from "@/components/PageHeader";
+import ImageSkeleton from "@/components/ImageSkeleton";
 
 const images = [
   {
@@ -38,7 +44,7 @@ const images = [
 
 export default {
   name: "GalleryPage",
-  components: {PageHeader},
+  components: {PageHeader, ImageSkeleton},
   data: () => {
     return {
       images,
