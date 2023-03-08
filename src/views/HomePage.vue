@@ -1,6 +1,10 @@
 <template>
   <div class="mobile-navbar-margin" v-if="isMobile"></div>
-  <ul class="home-slider">
+  <!--  for mobile -->
+  <PlaceHolder v-if="!imageLoaded && isMobile" :width="`100%`" :height="`80vw`"/>
+  <!--  for desktop -->
+  <PlaceHolder v-if="!imageLoaded && !isMobile" :width="`100%`" :height="`100vh`"/>
+  <ul class="home-slider transition" :style="{opacity:imageLoaded ? '1' : '0' }">
     <li class="slider"></li>
   </ul>
   <section class="section container">
@@ -25,8 +29,10 @@
           <div class="container">
             <div class="columns is-multiline">
               <ul class="album">
-                <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images" :key="index">
-                  <img :src="index" alt="" class="img-responsive animated fadeInUp">
+                <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images"
+                    :key="index">
+                  <ImageSkeleton :imageSrc="index" :alt="'Image'"
+                                 class="img-responsive animated fadeInUp"></ImageSkeleton>
                 </li>
               </ul>
             </div>
@@ -38,8 +44,12 @@
 </template>
 
 <script>
+import ImageSkeleton from "@/components/ImageSkeleton";
+import PlaceHolder from "@/components/PlaceHolder.vue";
+
 export default {
   name: "HomePage",
+  components: {ImageSkeleton, PlaceHolder},
   data: () => {
     const images = []
 
@@ -50,6 +60,7 @@ export default {
     return {
       images,
       isMobile: false,
+      imageLoaded: false,
     };
   },
   mounted() {
@@ -57,6 +68,19 @@ export default {
       this.isMobile = true;
     } else {
       this.isMobile = false
+    }
+    this.checkImageLoaded()
+  },
+  methods: {
+    checkImageLoaded() {
+      const img = new Image()
+      const img2 = new Image()
+      img.src = require(`../assets/home/slider/01.webp`)
+      img2.src = require(`../assets/home/slider/02.webp`)
+      img.onload = () => {
+        this.imageLoaded = true
+      }
+      img2.onload
     }
   }
 }
@@ -86,7 +110,6 @@ export default {
 @media screen and (max-width: 768px) {
   .slider {
     height: 67vw;
-
   }
 }
 

@@ -1,28 +1,54 @@
 <template>
-  <div class="image-holder animated fadeInUp glassBox">
+  <div class="image-holder animated fadeInUp glassBox" style="position: relative">
     <router-link :to="`/${serviceUrl}`">
-<!--            <img class="image bg" :src="require(`@/assets/${imagePath}`)">-->
-      <div class="bg" :style="{'background-image': 'url(' + require(`@/assets/${imagePath}.webp`) + ')'}"></div>
-      <div class="border"></div>
-      <div class="glassBox__imgBox">
-        <img :src="require(`@/assets/${imagePath}.png`)" alt="" class="obj">
+      <div v-if="!(imageLoaded2 && imageLoaded)">
+        <PlaceHolder :w="`362px`" :h="`469px`" :width="`100%`" :height="`100%`"></PlaceHolder>
       </div>
-            <div class="caption">
-              <i class="fa fa-camera"></i>
-              <h3>{{ caption }}</h3>
-            </div>
+      <div class="transition" :style="{opacity:imageLoaded2 && imageLoaded ? '1' : '0' }">
+        <div class="bg" :style="{'background-image': 'url(' + require(`@/assets/${imagePath}.webp`) + ')'}"></div>
+        <div class="border"></div>
+        <div class="glassBox__imgBox" :style="{ display: imageLoaded2 && imageLoaded ? 'block' : 'none' }">
+          <img @load="imageLoaded2 = true" :src="require(`@/assets/${imagePath}.png`)" alt="" class="obj">
+        </div>
+        <div class="caption">
+          <i class="fa fa-camera"></i>
+          <h3>{{ caption }}</h3>
+        </div>
+      </div>
     </router-link>
   </div>
 </template>
 
 <script>
+import PlaceHolder from "@/components/PlaceHolder";
+
 export default {
+  components: {PlaceHolder},
+  data() {
+    return {
+      imageUrl: require(`../assets/${this.imagePath}.webp`),
+      imageLoaded: false,
+      imageLoaded2: false
+    }
+  },
+  mounted() {
+    this.checkImageLoaded()
+  },
+  methods: {
+    checkImageLoaded() {
+      const img = new Image()
+      img.src = this.imageUrl
+      img.onload = () => {
+        this.imageLoaded = true
+      }
+    }
+  },
   name: "AnimatedServiceImage",
   props: {
     imagePath: {required: true, type: String},
     caption: {required: true, type: String},
     serviceUrl: {required: true, type: String}
-  }
+  },
 }
 </script>
 
@@ -35,6 +61,8 @@ export default {
   width: 100%;
   /*margin: 10px;*/
 }
+
+
 
 .caption {
   position: absolute;
@@ -74,7 +102,6 @@ export default {
   bottom: 0;
   left: 0;
   background: rgba(204, 204, 204, 0);
-  /*background-image: url("../assets/services/birthday/cover.jpg");*/
   background-size: cover;
 }
 
