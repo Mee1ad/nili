@@ -248,3 +248,7 @@ body::-webkit-scrollbar {
 .mobile-navbar-margin {
     height: 51px;
 }
+
+.transition {
+    transition: all 2000ms ease !important
+}

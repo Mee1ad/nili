@@ -2,6 +2,7 @@
   <div class="image-holder animated fadeInUp">
     <router-link :to="`/${serviceUrl}`">
       <img class="image" :src="require(`@/assets/${imagePath}`)">
+
       <div class="caption">
         <i class="fa fa-camera"></i>
         <h3>{{ caption }}</h3>

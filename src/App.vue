@@ -17,7 +17,7 @@
 
 <script>
 import SideMenu from './components/SideMenu.vue'
-import FooterPage from "@/components/FooterPage.vue";
+import FooterPage from "@/components/Footer.vue";
 import ScrollProgress from "@/components/ScrollProgress";
 
 
