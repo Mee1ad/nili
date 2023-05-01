@@ -33,7 +33,11 @@
               <ul class="album">
                 <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images"
                     :key="index">
-                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :w="`10vw`" :h="`525px`"
+                  <!--  for mobile -->
+                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :w="`10vw`" :h="`492px`" v-if="isMobile"
+                                 class="img-responsive animated fadeInUp"></ImageSkeleton>
+                  <!--  for desktop -->
+                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :w="`10vw`" :h="`525px`" v-if="!isMobile"
                                  class="img-responsive animated fadeInUp"></ImageSkeleton>
                 </li>
               </ul>
