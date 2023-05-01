@@ -18,17 +18,17 @@
       Sedeuter nunc volutpat, mollis sapien vel, conseyer turpeutionyer massa in libero semper. Fusceler mollis augue
       sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Fusce mollis augue sit amet hendrerit
       vestibulum.</p>
-    <div class="masonry">
-      <!--  for mobile -->
-      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image" w="316px" h="474px"
+    <!--  for mobile -->
+    <div class="masonry" v-if="isMobile">
+      <ImageSkeleton  v-for="image in images[this.$route.params.serviceName]" :key="image" w="316px" h="474px"
                      :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
-                     :alt="image.alt" class="image animated fadeInUp" :v-if="isMobile"/>
-      <!--  for desktop -->
-      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image" w="361px" h="541px"
+                     :alt="image.alt" class="image animated fadeInUp" />
+    </div>
+    <!--  for desktop -->
+    <div class="masonry" v-if="!isMobile">
+      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image" w="361px" h="542px"
                      :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
-                     :alt="image.alt" class="image animated fadeInUp" :v-if="isMobile"/>
-
-
+                     :alt="image.alt" class="image animated fadeInUp" />
     </div>
   </div>
 </template>
