@@ -6,7 +6,7 @@
       <CrossCloseBTN class="delete" v-if="isMobile && isOpen" @click="isOpen = !isOpen"></CrossCloseBTN>
       <div class="side-menu-content">
         <router-link class="logo" to="/" @click="isOpen = !isOpen">
-          <img class="logo-image" src="../assets/logo.png">
+          <img class="logo-image" src="../assets/logo.png" alt="Nili-Razaghi-Logo">
         </router-link>
         <font-awesome-icon icon="fa-solid fa-user-secret"/>
         <router-link class="typo" to="/" @click="isOpen = !isOpen">
@@ -253,10 +253,6 @@ a:hover {
   right: 0;
   z-index: 99;
   backdrop-filter: blur(15px);
-}
-
-.navbar-burger {
-  margin: 0;
 }
 
 .burger-button {

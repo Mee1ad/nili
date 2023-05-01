@@ -7,7 +7,7 @@
              :key="serviceImage">
           <AnimatedServiceImage :imagePath="serviceImage.image_path" :caption="serviceImage.caption"
                                 :croppedImagePath="serviceImage.croppedImagePath"
-                                :serviceUrl="serviceImage.serviceUrl"/>
+                                :serviceUrl="serviceImage.serviceUrl" :alt="serviceImage.alt"/>
         </div>
       </div>
     </div>
@@ -38,31 +38,37 @@ const serviceImages = [
   {
     image_path: 'services/birthday/cover',
     caption: 'Birthday Photography',
-    serviceUrl: 'services/birthday'
+    alt: 'Birthday Photography',
+    serviceUrl: 'services/birthday',
   },
   {
     image_path: 'services/portrait/cover',
     caption: 'Portrait Photography',
+    alt: 'Portrait Photography',
     serviceUrl: 'services/portrait'
   },
   {
     image_path: 'services/couple/cover',
     caption: 'Couple Photography',
+    alt: 'Couple Photography',
     serviceUrl: 'services/couple'
   },
   {
     image_path: 'services/kids/cover',
     caption: 'Kids Photography',
+    alt: 'Kids Photography',
     serviceUrl: 'services/kids'
   },
   {
     image_path: 'services/product/cover',
     caption: 'Product Photography',
+    alt: 'Product Photography',
     serviceUrl: 'services/product'
   },
   {
     image_path: 'services/edit/cover',
     caption: 'Edit Photos',
+    alt: 'Edit Photos',
     serviceUrl: 'services/edit'
   }
 ]

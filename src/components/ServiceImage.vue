@@ -1,7 +1,7 @@
 <template>
   <div class="image-holder animated fadeInUp">
     <router-link :to="`/${serviceUrl}`">
-      <img class="image" :src="require(`@/assets/${imagePath}`)">
+      <img class="image" :src="require(`@/assets/${imagePath}`)" :alt=alt>
 
       <div class="caption">
         <i class="fa fa-camera"></i>
@@ -16,6 +16,7 @@ export default {
   name: "ServiceImage",
   props: {
     imagePath: {required: true, type: String},
+    alt: {required: true, type: String},
     caption: {required: true, type: String},
     serviceUrl: {required: true, type: String}
   }

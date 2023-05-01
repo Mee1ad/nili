@@ -8,7 +8,7 @@
         <div class="bg" :style="{'background-image': 'url(' + require(`@/assets/${imagePath}.webp`) + ')'}"></div>
         <div class="border"></div>
         <div class="glassBox__imgBox" :style="{ display: imageLoaded2 && imageLoaded ? 'block' : 'none' }">
-          <img @load="imageLoaded2 = true" :src="require(`@/assets/${imagePath}.png`)" alt="" class="obj">
+          <img @load="imageLoaded2 = true" :src="require(`@/assets/${imagePath}.png`)" :alt=alt class="obj">
         </div>
         <div class="caption">
           <i class="fa fa-camera"></i>
@@ -46,6 +46,7 @@ export default {
   name: "AnimatedServiceImage",
   props: {
     imagePath: {required: true, type: String},
+    alt: {required: true, type: String},
     caption: {required: true, type: String},
     serviceUrl: {required: true, type: String}
   },
@@ -149,28 +150,6 @@ export default {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.glassBox__title {
-  text-align: center;
-  margin-top: 15px;
-  color: var(--normal-text-color);
-  font-size: 20px;
-  font-weight: 400;
-  font-family: "Lato";
-}
-
-.glassBox__content {
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  text-align: center;
-  color: var(--normal-text-color);
-  font-size: 14px;
-  font-family: "Lato";
-  letter-spacing: 0.1em;
-  opacity: 0;
 }
 
 .glassBox__imgBox {

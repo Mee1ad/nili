@@ -4,7 +4,7 @@
     <p class="leave-feedback">Leave feedback</p>
     <div class="feedback-item" v-for="feedback in feedbacks" :key="feedback">
       <FeedbackItem :image_path="feedback.image_path" :name="feedback.name" :instagram="feedback.instagram"
-                    :description="feedback.description"></FeedbackItem>
+                    :description="feedback.description" :alt="feedback.alt"></FeedbackItem>
     </div>
     <div class="create-feedback animated fadeInUp">
       <h3>Leave Feedback</h3>
@@ -16,7 +16,7 @@
       <div class="form-group">
         <input class="input" type="text" placeholder="Your Name"/>
         <input class="input" type="text" placeholder="Link to your social network account"/>
-        <textarea class="input" name="message" placeholder="Your Feedback" col="30" rows="7" spellcheck="false"/>
+        <textarea class="input" name="message" placeholder="Your Feedback" rows="7" spellcheck="false"/>
         <button type="submit" class="submit">Submit Feedback</button>
       </div>
     </div>
@@ -33,6 +33,7 @@ const feedbacks = [
   {
     image_path: 'feedback/Amir & Mohad.png',
     name: 'Mohad & Amir',
+    alt: 'Mohad & Amir',
     instagram: 'mohadese.hosseini1',
     description: "I think it's been almost three years that I've posed in front of your camera. Each time I felt sth new" +
         " . You stood in front of me and calmed me so professionally that I became your camera's friend." +
@@ -45,6 +46,7 @@ const feedbacks = [
   {
     image_path: 'feedback/Gisoo\'s Mom.png',
     name: 'Gisoo’s Mom',
+    alt: 'Gisoo’s Mom',
     instagram: null,
     description: 'I really liked my pictures. Specially the part that you could capture our feelings and' +
         ' still whenever I watch my pictures I feel exhilarated. The compositions are also great, I loved it.' +
@@ -53,18 +55,21 @@ const feedbacks = [
   {
     image_path: 'feedback/Saeeide.png',
     name: 'Saeeideh & Mojtaba',
+    alt: 'Saeeideh & Mojtaba',
     instagram: 'saeidehjalali',
     description: 'I love my pictures and moreover I love your energy, manner and work ethics.'
   },
   {
     image_path: 'feedback/Nikan\'s Mom.png',
     name: 'Nikan’s Mom',
+    alt: 'Nikan’s Mom',
     instagram: '',
     description: 'Girl what have you done to my face? It’s great! I love the retouch and the editing. I love them.'
   },
   {
     image_path: 'feedback/3.jpg',
     name: 'Mr.Zareh',
+    alt: 'Mr.Zareh',
     instagram: '',
     description: 'Thank you for your good edit and design. Your edit is good and neat. I hope we can work with' +
         '  each other more.'

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <img class="avatar" :src="require(`@/assets/${image_path}`)">
+    <img class="avatar" :src="require(`@/assets/${image_path}`)" :alt=alt>
     <h3 class="avatar-title">{{ name }}</h3>
     <div v-if="instagram">
       <a :href="`https://instagram.com/${instagram}`" class="meta">@{{ instagram }}</a>
@@ -17,6 +17,7 @@ export default {
   name: "FeedbackItem",
   props: {
     image_path: {required: true, type: String},
+    alt: {required: true, type: String},
     name: {required: true, type: String},
     instagram: {required: true, type: String},
     description: {required: true, type: String},
@@ -25,10 +26,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: inline;
-
-}
 
 .avatar {
   width: 100px !important;

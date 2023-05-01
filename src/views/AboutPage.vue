@@ -14,7 +14,7 @@
         <p>Nili's love for her craft shines through in her cinematic photographs, which blend artistry and technical skill
         to create images. Her relentless pursuit of excellence drives her to continuously improve her skills and learn
         something new with every photography session.</p>
-      <img class="sign" src="../assets/home/sign.png">
+      <img class="sign" src="../assets/home/sign.png" alt="Nili-Razaghi-Sign">
     </div>
   </div>
 </template>
