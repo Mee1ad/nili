@@ -5,7 +5,7 @@
         meta="SERVICES"/>
 
     <ImageSkeleton :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"
-                   :alt="'Image'" h="573px" class="header-image animated fadeInUp"></ImageSkeleton>
+                   :alt="'Image'" w="auto" h="573px" class="header-image animated fadeInUp"/>
     <p>Yuroin non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat, mollis sapien vel, conseyer
       turpeutionyer masin libero sempe. Fusceler mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis
       lacus. Fusce mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Yuroin non lorem ac erat
@@ -18,19 +18,15 @@
       Sedeuter nunc volutpat, mollis sapien vel, conseyer turpeutionyer massa in libero semper. Fusceler mollis augue
       sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Fusce mollis augue sit amet hendrerit
       vestibulum.</p>
-    <!--    <div class="columns is-multiline">-->
-    <!--      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp column is-4-desktop is-6-tablet is-12-mobile"-->
-    <!--           :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"-->
-    <!--           :alt="image.alt"/>-->
-    <!--    </div>-->
     <div class="masonry">
-<!--      <img v-for="image in images[this.$route.params.serviceName]" :key="image" class="image animated fadeInUp"-->
-<!--           :src="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"-->
-<!--           :alt="image.alt"/>-->
-
-      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image"
+      <!--  for mobile -->
+      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image" w="316px" h="474px"
                      :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
-                     :alt="image.alt" class="image animated fadeInUp"></ImageSkeleton>
+                     :alt="image.alt" class="image animated fadeInUp" :v-if="isMobile"/>
+      <!--  for desktop -->
+      <ImageSkeleton v-for="image in images[this.$route.params.serviceName]" :key="image" w="361px" h="541px"
+                     :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
+                     :alt="image.alt" class="image animated fadeInUp" :v-if="isMobile"/>
 
 
     </div>
@@ -243,10 +239,13 @@ export default {
   data: () => {
     return {
       images,
-      items
-      // serviceName
+      items,
+      isMobile: false,
     };
-  }
+  },
+  mounted() {
+    this.isMobile = window.innerWidth < 768;
+  },
 }
 </script>
 
