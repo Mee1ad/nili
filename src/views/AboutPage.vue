@@ -6,14 +6,14 @@
     <div class="content">
       <SPAN class="heading-meta">PHOTOGRAPHER</SPAN>
       <h3 class="about-heading">Nili Razaghi</h3>
-      <p>Quisque bibendum tincidunt varius. Vestibulum viverra bibendum magna, mattis gravida sapien tincidunt ut. Donec
-        felis nunc, dapibus quis facilisis quis, placerat vitae massa. Curabitur consectetur mi tellus, in dignissim
-        nibh maximus tempus. Cras vel metus nec eros laoreet ullamcorper sed sit amet lectus. Vivamus orci mi, malesuada
-        etteye liberet vithelacinia imperdiet ex. Vivamus egestas nibh quis pulvinar vestibulum. Mauris pellentesque
-        eros vitae tellus dapibus egestas.</p>
-      <p>Quisque bibendum tincidunt varius. Vestibulum viverra bibendum magna, mattis gravida sapien tincidunt ut. Donec
-        felis nunc, dapibus quis facilisis quis, placerat vitae massa. Curabitur consectetur mi tellus, in dignissim
-        nibh maximus tempus. Cras vel metus nec eros laoreet ullamcorper sed sit amet lectus.</p>
+      <p>Nili Razaghi is a photographer based in Iran. Nili has been professionally pursuing photography since the age
+        of 17, starting as a wedding and kids photographer. Over the years, she expanded her portfolio to include
+        commercial photography and videography, honing her skills by working with GCorp media team and now serving as
+        the media director of Royal Beauty Clinic and also works as a freelance photographer.</p>
+
+        <p>Nili's love for her craft shines through in her cinematic photographs, which blend artistry and technical skill
+        to create images. Her relentless pursuit of excellence drives her to continuously improve her skills and learn
+        something new with every photography session.</p>
       <img class="sign" src="../assets/home/sign.png">
     </div>
   </div>
