@@ -5,7 +5,11 @@
       <div class="masonry animated fadeInUp ">
         <div v-for="image in images" :key="image"
              class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile">
-          <ImageSkeleton :w="`100%`" :h="`350px`"
+          <!--  for mobile -->
+          <ImageSkeleton :w="`10rem`" :h="`20rem`" v-if="isMobile"
+                         :imageSrc="require(`@/assets/gallery/bazar/${image.name}.jpg`)" :alt="image.alt"/>
+          <!--  for desktop -->
+          <ImageSkeleton :w="`21.8rem`" :h="`20rem`" v-if="!isMobile"
                          :imageSrc="require(`@/assets/gallery/bazar/${image.name}.jpg`)" :alt="image.alt"/>
         </div>
         <!--        <img v-for="image in images" :key="image" class="image animated fadeInUp img-responsive column is-4-desktop is-6-tablet is-12-mobile"-->
@@ -48,7 +52,15 @@ export default {
   data: () => {
     return {
       images,
+      isMobile: false,
     };
+  },
+  mounted() {
+    if (window.innerWidth < 768) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false
+    }
   }
 }
 </script>
