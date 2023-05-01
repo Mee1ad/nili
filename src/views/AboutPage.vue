@@ -2,7 +2,7 @@
   <div class="container animated fadeInUp col-xs-12">
     <PageHeader title="About Me" meta=""></PageHeader>
     <ImageSkeleton class="about-image"
-                   :imageSrc="require(`@/assets/about/01.webp`)" :alt="`Nili`" :w="`100%`" :h="`100vh`"/>
+                   :imageSrc="require(`@/assets/about/01.webp`)" :alt="`Nili`" :w="`100%`" :h="`var(--height)`"/>
     <div class="content">
       <SPAN class="heading-meta">PHOTOGRAPHER</SPAN>
       <h3 class="about-heading">Nili Razaghi</h3>
@@ -36,17 +36,19 @@ export default {
 
 <style scoped>
 .container {
-  margin: 0 15px 0 15px;
+  margin-bottom: 15px;
 }
 
 .about-image {
   height: 100vh;
+  --height: 100vh;
   margin-bottom: 30px;
 }
 
 @media screen and (max-width: 768px) {
   .about-image {
     height: 57vw;
+    --height: 57vw;
 
   }
 }
@@ -60,7 +62,7 @@ export default {
 
 .sign {
   width: 240px;
-  margin: 0 auto;
+  margin: 0 auto 48px 0;
 }
 
 </style>
