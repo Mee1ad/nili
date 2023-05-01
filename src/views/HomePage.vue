@@ -1,9 +1,9 @@
 <template>
   <div class="mobile-navbar-margin" v-if="isMobile"></div>
   <!--  for mobile -->
-  <PlaceHolder v-if="!imageLoaded && isMobile" :width="`100%`" :height="`80vw`"/>
+  <PlaceHolder v-if="!imageLoaded && isMobile" :width="`100%`" :height="`80vw`" :w="`100%`" :h="`80vw`"/>
   <!--  for desktop -->
-  <PlaceHolder v-if="!imageLoaded && !isMobile" :width="`100%`" :height="`100vh`"/>
+  <PlaceHolder v-if="!imageLoaded && !isMobile" :width="`100%`" :height="`100vh`" :w="`100%`" :h="`100vh`"/>
   <ul class="home-slider transition" :style="{opacity:imageLoaded ? '1' : '0' }">
     <li class="slider"></li>
   </ul>
@@ -21,7 +21,8 @@
                   own
                   eyes, there is another in which it proves to us how little our eyes permit us to see.</p>
 <!--                <img class="sign" src="../assets/home/sign.png">-->
-                <ImageSkeleton class="sign" :imageSrc="require(`@/assets/home/sign.png`)" :alt="'Image'" :h="`65px`"/>
+                <ImageSkeleton class="sign" :imageSrc="require(`@/assets/home/sign.png`)" :alt="'Image'" :h="`65px`"
+                                :w="`auto`"/>
               </div>
             </div>
           </div>
@@ -65,11 +66,7 @@ export default {
     };
   },
   mounted() {
-    if (window.innerWidth < 768) {
-      this.isMobile = true;
-    } else {
-      this.isMobile = false
-    }
+    this.isMobile = window.innerWidth < 768;
     this.checkImageLoaded()
   },
   methods: {
@@ -117,19 +114,19 @@ export default {
 
 @keyframes example {
   0% {
-    background-image: url("../assets/home/slider/01.webp");
+    background-image: url("@/assets/home/slider/01.webp");
   }
   20% {
-    background-image: url("../assets/home/slider/01.webp");
+    background-image: url("@/assets/home/slider/01.webp");
   }
   50% {
-    background-image: url("../assets/home/slider/02.webp");
+    background-image: url("@/assets/home/slider/02.webp");
   }
   70% {
-    background-image: url("../assets/home/slider/02.webp");
+    background-image: url("@/assets/home/slider/02.webp");
   }
   100% {
-    background-image: url("../assets/home/slider/01.webp");
+    background-image: url("@/assets/home/slider/01.webp");
   }
 }
 
@@ -152,11 +149,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   transition: opacity 0.5s ease-in-out;
-}
-
-.album-image {
-  width: 30%;
-  margin: 15px 15px;
 }
 
 .album-image img {
