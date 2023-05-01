@@ -1,5 +1,6 @@
 <template>
-  <div class="placeholder" :style="{ '--placeholder-width': width, '--placeholder-height': height, width: w, height: h  }">
+  <div class="placeholder" :style="{ '--placeholder-width': width, '--placeholder-height': height, width: w, height: h,
+    maxWidth: '100px'}">
     <div v-if="!imageLoaded" class="loading-spinner"></div>
   </div>
 </template>
@@ -45,10 +46,6 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
 
-}
-
-.image-loaded {
-  filter: grayscale(0);
 }
 
 .placeholder::before {
