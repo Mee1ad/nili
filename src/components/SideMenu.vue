@@ -248,7 +248,7 @@ a:hover {
 }
 
 .burger-background {
-  background: #49494973;
+  background: var(--footer-background);
   position: fixed;
   left: 0;
   right: 0;
@@ -258,6 +258,5 @@ a:hover {
 
 .burger-button {
   margin-left: 10px;
-  opacity: 0.7;
 }
 </style>
