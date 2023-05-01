@@ -32,7 +32,7 @@
               <ul class="album">
                 <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images"
                     :key="index">
-                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :h="`525px`"
+                  <ImageSkeleton :imageSrc="index" :alt="'Image'"
                                  class="img-responsive animated fadeInUp"></ImageSkeleton>
                 </li>
               </ul>
