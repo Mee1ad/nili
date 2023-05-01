@@ -20,7 +20,6 @@ export default {
   background-color: var(--footer-background);
   text-align: center;
   padding: 40px 0 50px 0;
-  margin-top: 60px;
 }
 
 .footer-content > h1 {

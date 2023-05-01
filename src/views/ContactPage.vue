@@ -99,6 +99,7 @@ export default {
 
 .contact-form {
   max-width: 49%;
+  margin-bottom: 48px;
 }
 
 .input {

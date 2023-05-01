@@ -51,7 +51,7 @@ export default {
 
 .image-skeleton {
   position: relative;
-  width: 350px;
+  width: 100%;
   /*height: 520px;*/
 }
 

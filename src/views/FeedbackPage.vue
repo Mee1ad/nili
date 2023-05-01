@@ -128,6 +128,7 @@ export default {
 .form-group {
   display: inline-block;
   margin-left: 200px;
+  margin-bottom: 48px;
 }
 
 .input {
