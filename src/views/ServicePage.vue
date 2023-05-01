@@ -41,184 +41,184 @@ const images = {
   'birthday': [
     {
       'name': '1',
-      'alt': 'test'
+      'alt': 'birthday image'
     }, {
       'name': '7',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '3',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '4',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '5',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '2',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '8',
-      'alt': 'test'
+      'alt': 'birthday image'
     },
     {
       'name': '6',
-      'alt': 'test'
+      'alt': 'birthday image'
     }
   ],
   'couple': [
     {
       'name': '1',
-      'alt': 'test'
+      'alt': 'couple image'
     }, {
       'name': '2',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '3',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '7',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '5',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '6',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '4',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '11',
-      'alt': 'test'
+      'alt': 'couple image'
     },
     {
       'name': '8',
-      'alt': 'test'
+      'alt': 'couple image'
     },
 
     {
       'name': '9',
-      'alt': 'test'
+      'alt': 'couple image'
     },
 
     {
       'name': '10',
-      'alt': 'test'
+      'alt': 'couple image'
     },
 
   ],
   'portrait': [
     {
       'name': '1',
-      'alt': 'test'
+      'alt': 'portrait image'
     }, {
       'name': '2',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '3',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '7',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '5',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '6',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '4',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '8',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '9',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '10',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '11',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '12',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '13',
-      'alt': 'test'
+      'alt': 'portrait image'
     },
     {
       'name': '14',
-      'alt': 'test'
+      'alt': 'portrait image'
     }
   ],
   'kids': [
     {
       'name': '1',
-      'alt': 'test'
+      'alt': 'kids image'
     }, {
       'name': '2',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '3',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '7',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '5',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '6',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '4',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '8',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '9',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '10',
-      'alt': 'test'
+      'alt': 'kids image'
     },
     {
       'name': '11',
-      'alt': 'test'
+      'alt': 'kids image'
     }
   ]
 }

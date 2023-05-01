@@ -34,10 +34,10 @@
                 <li class="column animated fadeInUp is-4-desktop is-6-tablet is-12-mobile" v-for="index in images"
                     :key="index">
                   <!--  for mobile -->
-                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :w="`10vw`" :h="`492px`" v-if="isMobile"
+                  <ImageSkeleton :imageSrc="index.url" :alt="index.alt" :w="`10vw`" :h="`492px`" v-if="isMobile"
                                  class="img-responsive animated fadeInUp"></ImageSkeleton>
                   <!--  for desktop -->
-                  <ImageSkeleton :imageSrc="index" :alt="'Image'" :w="`10vw`" :h="`525px`" v-if="!isMobile"
+                  <ImageSkeleton :imageSrc="index.url" :alt="index.alt" :w="`10vw`" :h="`525px`" v-if="!isMobile"
                                  class="img-responsive animated fadeInUp"></ImageSkeleton>
                 </li>
               </ul>
@@ -60,7 +60,7 @@ export default {
     const images = []
 
     for (let i = 0; i < 14; i++) {
-      images.push(require(`../assets/home/album/${i}.webp`))
+      images.push({'url': require(`../assets/home/album/${i}.webp`), 'alt': `Image ${i}`})
     }
 
     return {
