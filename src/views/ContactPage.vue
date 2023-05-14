@@ -25,7 +25,8 @@
           <input class="input" type="text" placeholder="Your Email" v-model="email"/>
           <input class="input" type="text" placeholder="Your Number" v-model="number"/>
           <input class="input" type="text" placeholder="Subject" v-model="subject"/>
-          <textarea class="input" name="message" v-model="message" placeholder="Your Feedback" col="30" rows="7" spellcheck="false"/>
+          <textarea class="input" name="message" v-model="message" placeholder="Your Feedback" col="30" rows="7"
+                    spellcheck="false"/>
           <button type="submit" class="submit" @click.prevent="sendFeedback()">Send Message</button>
         </form>
       </div>
@@ -42,7 +43,7 @@ var md5 = require("md5");
 export default {
   name: "ContactPage",
   components: {PageHeader},
-  data: function() {
+  data: function () {
     return {
       email: "",
       number: "",
@@ -54,6 +55,25 @@ export default {
   },
   methods: {
     sendFeedback() {
+      if (this.message === "" || this.subject === "") {
+        alert("Please fill all fields");
+        return;
+      }
+
+
+      if (!this.number.match(/^[+0-9]*$/)) {
+        alert("Please enter a valid number");
+        return;
+      }
+
+      // validate if subject is not empty
+      if (this.subject === "") {
+        alert("Please enter a subject");
+        return;
+      }
+
+      // validate if message is not empty
+
       const message = this.subject + this.email + this.number + this.message + this.salt;
       this.token = md5(message);
       const postData = {

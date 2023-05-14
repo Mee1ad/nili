@@ -1,10 +1,13 @@
 <template>
-  <div class="parent">
+  <div :class="!isMobile? 'parent': 'mobileParent'">
     <PageHeader
         :title="this.$route.params.serviceName.charAt(0).toUpperCase() + this.$route.params.serviceName.slice(1)"
         meta="SERVICES"/>
 
-    <ImageSkeleton :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"
+    <ImageSkeleton v-if="isMobile" :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"
+                   :alt="'Image'" w="auto" h="161px" class="header-image animated fadeInUp"/>
+
+    <ImageSkeleton v-if="!isMobile" :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/landscape.jpg`)"
                    :alt="'Image'" w="auto" h="573px" class="header-image animated fadeInUp"/>
     <p>Yuroin non lorem ac erat suscipit bibendum. Nulla facilisi. Sedeuter nunc volutpat, mollis sapien vel, conseyer
       turpeutionyer masin libero sempe. Fusceler mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis
@@ -19,7 +22,7 @@
       sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Fusce mollis augue sit amet hendrerit
       vestibulum.</p>
     <!--  for mobile -->
-    <div class="masonry" v-if="isMobile">
+    <div class="is-4-desktop is-6-tablet is-12-mobile" v-if="isMobile">
       <ImageSkeleton  v-for="image in images[this.$route.params.serviceName]" :key="image" w="316px" h="474px"
                      :imageSrc="require(`@/assets/services/${this.$route.params.serviceName}/${image.name}.jpg`)"
                      :alt="image.alt" class="image animated fadeInUp" />
@@ -252,7 +255,11 @@ export default {
 <style scoped>
 
 .parent {
-  margin: 0 30px;
+  margin: 0 2rem 0 6rem;
+}
+
+.mobileParent {
+  margin: 1rem;
 }
 
 .header-image {

@@ -4,7 +4,7 @@
   <PlaceHolder v-if="!imageLoaded && isMobile" :width="`100%`" :height="`80vw`" :w="`100%`" :h="`80vw`"/>
   <!--  for desktop -->
   <PlaceHolder v-if="!imageLoaded && !isMobile" :width="`100%`" :height="`100vh`" :w="`100%`" :h="`100vh`"/>
-  <ul class="home-slider transition" :style="{opacity:imageLoaded ? '1' : '0' }">
+  <ul v-if="imageLoaded" class="home-slider transition" :style="{opacity:imageLoaded ? '1' : '0' }">
     <li class="slider"></li>
   </ul>
   <section class="section container">
